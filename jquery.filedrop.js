@@ -59,7 +59,7 @@
       },
       responseError: function(xhr, file, fileIndex) {
         alert(xhr.statusText);
-      }
+      },
       uploadStarted: empty,
       uploadFinished: empty,
       progressUpdated: empty,
