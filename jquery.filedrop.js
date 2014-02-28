@@ -57,7 +57,7 @@
       error: function(err, file, i, status) {
         alert(err);
       },
-      responseError: function(xhr, file, fileIndex) {
+      responseError: function(xhr, response, file, fileIndex) {
         alert(xhr.statusText);
       },
       uploadStarted: empty,
@@ -450,7 +450,7 @@
 
           // Pass any errors to the error option
           if (xhr.status < 200 || xhr.status > 299) {
-            opts.responseError(xhr, file, fileIndex);
+            opts.responseError(xhr, serverResponse, file, fileIndex);
           }
         };
       };
